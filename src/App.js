@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   const getContacts = () => {
-    axios.get('http://localhost:5000/contacts')
+    axios.get('https://long-cyan-cheetah-coat.cyclic.app/contacts')
       .then(response => {
         setContacts(response.data);
       })
@@ -35,7 +35,7 @@ function App() {
 
   const handleAddContact = event => {
     event.preventDefault();
-    axios.post('http://localhost:5000/contacts/add', { name, email, phone })
+    axios.post('https://long-cyan-cheetah-coat.cyclic.app/contacts/add', { name, email, phone })
       .then(response => {
         console.log(response);
         getContacts();
